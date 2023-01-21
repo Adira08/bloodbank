@@ -1,0 +1,532 @@
+==============================
+
+@Default Styles
+
+Table of Content:
+01/ Variables
+02/ predefin
+03/ header
+
+
+================================*/
+
+/*----------------------------------------------------*/
+/*font Variables*/
+/*Color Variables*/
+/*=================== fonts ====================*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:500,600");
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+body {
+  line-height: 25px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: #777777; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #222222; }
+
+.list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; }
+  a:hover, a:focus {
+    text-decoration: none;
+    outline: none; }
+
+button:focus {
+  outline: none;
+  box-shadow: none; }
+
+.ml-10 {
+  margin-left: 10px; }
+
+.ml-20 {
+  margin-left: 20px; }
+
+.ml-40 {
+  margin-left: 40px; }
+
+.mr-20 {
+  margin-right: 20px; }
+
+.mr-25 {
+  margin-right: 25px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.section_gap {
+  padding: 130px 0px; }
+  @media (max-width: 991px) {
+    .section_gap {
+      padding: 70px 0; } }
+
+.section_gap_top {
+  padding-top: 120px; }
+  @media (max-width: 991px) {
+    .section_gap_top {
+      padding-top: 70px 0; } }
+
+.section_gap_bottom {
+  padding-bottom: 120px; }
+  @media (max-width: 991px) {
+    .section_gap_bottom {
+      padding-bottom: 70px 0; } }
+
+.white_bg {
+  background: #fff !important; }
+
+/* Main Title Area css
+============================================================================================ */
+.main_title {
+  text-align: center;
+  margin-bottom: 80px; }
+  @media (max-width: 991px) {
+    .main_title {
+      margin-bottom: 40px; } }
+  .main_title h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: capitalize; }
+    @media (max-width: 767px) {
+      .main_title h2 {
+        font-size: 30px; } }
+  .main_title p {
+    margin-bottom: 0px;
+    max-width: 570px;
+    margin: auto; }
+  .main_title.white h2 {
+    color: #fff; }
+  .main_title.white p {
+    color: #fff;
+    opacity: .6; }
+
+/* End Main Title Area css
+============================================================================================ */
+.primary_btn {
+  display: inline-block;
+  background: #60bc0f;
+  padding: 0px 50px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 48px;
+  border: 1px solid #60bc0f;
+  border-radius: 0px;
+  outline: none !important;
+  box-shadow: none !important;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 300ms linear 0s; }
+  .primary_btn:hover {
+    background: transparent;
+    color: #60bc0f; }
+  .primary_btn.yellow_btn {
+    background: #fdbb00 !important;
+    border: 1px solid #fdbb00 !important;
+    color: #000000; }
+    .primary_btn.yellow_btn:hover {
+      background: transparent !important; }
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.header_area {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  transition: background 0.4s, all 0.3s linear; }
+  .header_area .container {
+    padding: 0px 8px; }
+  .header_area .navbar {
+    background: transparent;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px; }
+    .header_area .navbar .nav .nav-item {
+      margin-right: 45px; }
+      .header_area .navbar .nav .nav-item .nav-link {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 80px;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 0px;
+        display: inline-block; }
+        .header_area .navbar .nav .nav-item .nav-link:after {
+          display: none; }
+      .header_area .navbar .nav .nav-item:hover .nav-link, .header_area .navbar .nav .nav-item.active .nav-link {
+        color: white; font-weight: bold; font-size:15px ; }
+      .header_area .navbar .nav .nav-item.submenu {
+        position: relative; }
+        .header_area .navbar .nav .nav-item.submenu ul {
+          border: none;
+          padding: 0px;
+          border-radius: 0px;
+          box-shadow: none;
+          margin: 0px;
+          background: #fff; }
+          @media (min-width: 992px) {
+            .header_area .navbar .nav .nav-item.submenu ul {
+              position: absolute;
+              top: 120%;
+              left: 0px;
+              min-width: 200px;
+              text-align: left;
+              opacity: 0;
+              transition: all 300ms ease-in;
+              visibility: hidden;
+              display: block;
+              border: none;
+              padding: 0px;
+              border-radius: 0px;
+              box-shadow: 0px 5px 10px rgba(221, 221, 221, 0.2); } }
+          .header_area .navbar .nav .nav-item.submenu ul:before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 0 10px;
+            border-color: #eeeeee transparent transparent transparent;
+            position: absolute;
+            right: 24px;
+            top: 45px;
+            z-index: 3;
+            opacity: 0;
+            transition: all 400ms linear; }
+          .header_area .navbar .nav .nav-item.submenu ul .nav-item {
+            display: block;
+            float: none;
+            margin-right: 0px;
+            border-bottom: 1px solid #ededed;
+            margin-left: 0px;
+            transition: all 0.4s linear; }
+            .header_area .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
+              line-height: 45px;
+              color: #222222;
+              padding: 0px 30px;
+              transition: all 150ms linear;
+              display: block;
+              margin-right: 0px;
+              text-transform: capitalize; }
+            .header_area .navbar .nav .nav-item.submenu ul .nav-item:last-child {
+              border-bottom: none; }
+            .header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link {
+              background: red;
+              color: #fff; }
+        @media (min-width: 992px) {
+          .header_area .navbar .nav .nav-item.submenu:hover ul {
+            visibility: visible;
+            opacity: 1;
+            top: 100%; } }
+        .header_area .navbar .nav .nav-item.submenu:hover ul .nav-item {
+          margin-top: 0px; }
+      .header_area .navbar .nav .nav-item:last-child {
+        margin-right: 0px; }
+  .header_area.navbar_fixed .main_menu {
+    position: fixed;
+    width: 100%;
+    top: -70px;
+    left: 0;
+    right: 0;
+    background: #222222;
+    transform: translateY(70px);
+    transition: transform 500ms ease, background 500ms ease;
+    -webkit-transition: transform 500ms ease, background 500ms ease;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1); }
+    .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
+      line-height: 70px; }
+
+/*---------------------------------------------------- */
+/* Home Banner Area css
+============================================================================================ */
+.home_banner_area {
+  z-index: 1;
+  min-height: 720px;
+  display: flex;
+  background: linear-gradient(rgba(3, 1, 10, 0.5), rgba(3, 1, 10, 0.5)), url(../images/bloodbankbanner.jpg) no-repeat scroll center center;
+  background-size: cover; }
+  .home_banner_area .banner_inner {
+    width: 100%;
+    display: flex; }
+    .home_banner_area .banner_inner .container {
+      vertical-align: middle;
+      align-self: center; }
+    .home_banner_area .banner_inner .banner_content {
+      color: #fff;
+      vertical-align: middle;
+      align-self: center;
+      text-align: center; }
+      .home_banner_area .banner_inner .banner_content .upper_text {
+        font-size: 50px;
+        text-transform: uppercase;
+        color: #fdbb00; }
+        @media (max-width: 767px) {
+          .home_banner_area .banner_inner .banner_content .upper_text {
+            font-size: 35px; } }
+      .home_banner_area .banner_inner .banner_content h2 {
+        color: #ffffff;
+        margin-top: 0px;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: "Poppins", sans-serif;
+        line-height: 70px;
+        text-transform: uppercase;
+        margin-bottom: 20px; }
+      .home_banner_area .banner_inner .banner_content p {
+        color: #f9f9ff;
+        max-width: 680px;
+        margin: 0px auto 45px; }
+      @media (max-width: 767px) {
+        .home_banner_area .banner_inner .banner_content .mr-20 {
+          margin-right: 0;
+          margin-bottom: 15px; } }
+/*========================================================================================================================================*/
+
+/* Our services area
+=========================================================================== */
+/* Start services Area css
+============================================================================================ */
+.causes_area {
+  padding: 130px 0px 100px; }
+  @media (max-width: 991px) {
+    .causes_area {
+      padding: 70px 0px 40px; } }
+
+.single_causes {
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: none;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: all 300ms linear 0s;
+  background: #f9fafc; }
+  @media (max-width: 575px) {
+    .single_causes {
+      padding: 50px 10px; } }
+  .single_causes img {
+    margin-bottom: 35px; }
+  .single_causes h4 {
+    font-size: 20px;
+    margin-bottom: 40px; }
+  .single_causes p {
+    margin-bottom: 0px; }
+  .single_causes:hover {
+    box-shadow: 0px 20px 30px rgba(153, 153, 153, 0.2); }
+
+/* End services Area css
+============================================================================================ */
+/* Our services card Area css
+============================================================================================ */
+.features_causes {
+  padding-bottom: 100px; }
+  @media (max-width: 991px) {
+    .features_causes {
+      padding-bottom: 40px; } }
+  .features_causes .card {
+    border-radius: 0px;
+    border: 0;
+    transition: all 300ms linear 0s;
+    margin-bottom: 30px;
+    overflow: hidden; }
+    .features_causes .card p {
+      margin-bottom: 0; }
+    .features_causes .card .card-body {
+      padding: 0; }
+    .features_causes .card .card-img-top {
+      border-radius: 0px; }
+    .features_causes .card figure {
+      overflow: hidden;
+      margin: 0; }
+      .features_causes .card figure img {
+        transition: all 300ms linear 0s; }
+    .features_causes .card .card_inner_body {
+      padding: 40px 30px; }
+      .features_causes .card .card_inner_body h4 {
+        font-size: 20px; }
+        @media (max-width: 1199px) and (min-width: 992px) {
+          .features_causes .card .card_inner_body h4 {
+            font-size: 16px; } }
+    .features_causes .card .raised_goal {
+      margin-top: 25px;
+      margin-bottom: 20px; }
+      .features_causes .card .raised_goal span {
+        color: #60bc0f; }
+    .features_causes .card .donation .primary_btn {
+      line-height: 34px;
+      padding: 0 20px; }
+    .features_causes .card .donation span {
+      color: #60bc0f; }
+    .features_causes .card .card-text {
+      margin-bottom: 0; }
+    .features_causes .card:hover {
+      box-shadow: 0px 12px 40px rgba(153, 153, 153, 0.2); }
+      .features_causes .card:hover img {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2); }
+      .features_causes .card:hover .donation .primary_btn {
+        background: #fdbb00;
+        color: #000000;
+        border: 1px solid #fdbb00; }
+
+/* End Our Major Cause Area css
+============================================================================================ */
+
+/*  Facts area
+============================================================================================ */
+.facts{
+
+}
+/* End facts area
+============================================================================================== */
+
+/*  Footer area
+===================================================================== */
+
+.footer-clean {
+  padding:50px 0;
+  background-color:red;
+  color:#4b4c4d;
+}
+
+.footer-clean h3 {
+  margin-top:10;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity:1;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer-clean .item.social {
+  text-align:right;
+}
+
+@media (max-width:767px) {
+  .footer-clean .item {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-clean .item.social {
+    text-align:center;
+  }
+}
+
+.footer-clean .item.social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin-left:10px;
+  margin-top:22px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity:1;
+  font-size: 26px;
+  width: 45px;
+  height: 45px;
+}
+
+@media (max-width:991px) {
+  .footer-clean .item.social > a {
+    margin-top:40px;
+  }
+}
+
+@media (max-width:767px) {
+  .footer-clean .item.social > a {
+    margin-top:10px;
+  }
+}
+
+.footer-clean .copyright {
+  margin-top:14px;
+  margin-bottom:0;
+  font-size:13px;
+  opacity:0.6;
+}
+
+/*====================================================================================================*/
+
+.cta-area {
+  background: ;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  z-index: 1; }
+  .cta-area.overlay:after {
+    background: #000;
+    opacity: .5; }
+  .cta-area h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px; }
+  .cta-area p {
+    margin-bottom: 40px; }
+  .cta-area .primary-btn {
+    margin-top: 15px; }
+
+    /*==================================================================================================*/
+
+    /* Donation camp info
+    ==================================================================================================== */
+
+.donation-table{
+	margin-top: 100px;
+}
+
+
+    /* End Donation camp info 
+    =====================================================================================================*/
