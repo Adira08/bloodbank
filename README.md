@@ -3,7 +3,7 @@
 <p>This project is a web application for managing blood donations and requests. It allows hospitals to update the availability of blood stocks for different blood groups, and allows customers to register as blood donors and request blood.
 </p>
 
-<h1><a href="https://bbaditya.000webhostapp.com/">View Website</a></h1>
+<h1><a href="https://bbaditya.000webhostapp.com/" target="_blank">View Website</a></h1>
 
 <b><u>Technologies Used</u></b>
 <ul>
